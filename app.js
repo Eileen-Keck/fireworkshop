@@ -11,4 +11,25 @@
     messagingSenderId: "580506345372"
   };
   firebase.initializeApp(config);
+var firestore = firebase.firestore();
 </script>
+//window.onload=function(){
+	  const docRef = firestore.doc("textFromUserCollection/textFromUserDocument");
+	const inputTextField  =document.querySelector("#textFieldEntry");
+	
+	const saveButton = document.querySelector("#saveButton");
+	//const saveButton = document.getElementByID("saveButton");
+	//}
+	
+	
+	saveButton.addEventListener("click", function(){
+	const textToSave= inputTextField.value;
+	console.log("We have data");
+	docRef.set({
+	    textInput: textToSave
+	}).then(function(){
+	  console.log("Saved!!!");
+	}).catch(function(error){
+	    console.log("Got an error: ", error);
+	});
+	})

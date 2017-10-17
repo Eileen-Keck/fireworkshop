@@ -1,7 +1,4 @@
-
-<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
+ // Initialize Firebase
   var config = {
     apiKey: "AIzaSyAH3yHq5Y9x4FKTTN6YRCao7L_P159zxRU",
     authDomain: "fire-storage-1b94a.firebaseapp.com",
@@ -12,7 +9,6 @@
   };
   firebase.initializeApp(config);
 var firestore = firebase.firestore();
-</script>
 //window.onload=function(){
 	  const docRef = firestore.doc("textFromUserCollection/textFromUserDocument");
 	const inputTextField  =document.querySelector("#textFieldEntry");
